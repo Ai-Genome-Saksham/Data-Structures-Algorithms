@@ -23,12 +23,9 @@ void printlist(Node *head){
 
 Node *insertBegin(Node *head, int x)
 {
-    Node *temp = new Node(x);
-    
-    if(head!=NULL){
-        temp->next = head;
-        head->prev = temp;
-    }
+    Node *temp=new Node(data);
+    temp->next=head;
+    if(head!=NULL)head->prev=temp;
     return temp;
 }
 
